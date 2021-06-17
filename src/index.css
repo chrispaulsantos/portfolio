@@ -1,13 +1,263 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+@font-face {
+    font-family: 'Aurek-besh';
+    src: url(./fonts/aurebesh.woff) format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+
+    /* overflow: hidden; */
+
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+
+    color: #444;
+
+    width: 100vw;
+    height: 100vh;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    padding: 0;
+}
+
+.bg-container {
+    position: fixed;
+    z-index: 0;
+    height: 80%;
+    width: 100%;
+    background-image: linear-gradient(135deg, #f97794 10%, #623aa2 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 71%, 0% 100%);
+}
+
+main {
+    min-height: 100%;
+    position: relative;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5rem 1rem 0 1rem;
+    margin: 0 auto 5rem auto;
+}
+
+main section {
+    display: flex;
+    justify-content: center;
+    width: 60%;
+}
+
+footer {
+    z-index: 100;
+    position: fixed;
+    bottom: 8px;
+    left: 8px;
+}
+
+#loader {
+    display: none;
+}
+
+.loader {
+    border: 2px solid rgba(0, 0, 0, 0.25); /* Light grey */
+    border-top: 2px solid rgba(255, 255, 255, 0.75); /* Blue */
+    border-radius: 500%;
+    width: 15px;
+    height: 15px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+a {
+    text-decoration: none;
+    transition: 0.5s color cubic-bezier(0.075, 0.82, 0.165, 1);
+    color: #aaa;
+}
+
+a:hover {
+    color: #444;
+}
+
+.aurebesh {
+    font-family: 'Aurek-Besh';
+}
+
+small.aurebesh {
+    font-size: xx-small;
+}
+
+aside {
+    font-size: small;
+}
+
+.card {
+    border-radius: 12px;
+    background-color: white;
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    overflow: hidden;
+}
+
+.card .card-header {
+    margin-bottom: 1rem;
+}
+
+.card .card-header h1 {
+    font-size: 2em;
+}
+
+.profile-content-container {
+    padding: 1rem;
+    align-self: flex-start;
+    flex-grow: 1;
+    display: flex;
+}
+
+.profile-content {
+    width: 50%;
+}
+
+.profile-content h1 {
+    font-size: 3rem;
+}
+
+.profile-content aside {
+    font-weight: bold;
+}
+
+.profile-content p.aurebesh {
+    font-size: 0.75rem;
+    margin-top: 0;
+}
+
+.profile-content .bio {
+    font-size: larger;
+}
+
+.profile-image {
+    border-radius: 12px;
+    /* background-image: url(../chris.JPG); */
+    background-position: 50% 38%;
+    background-size: 300%;
+    height: 475px;
+    width: 256px;
+}
+
+iframe {
+    border-radius: 12px;
+    border: none;
+}
+
+iframe.website {
+    width: 100%;
+}
+
+button.btn {
+    border: none;
+    border-radius: 12px;
+    padding: 0.5rem 1rem;
+    background-color: #dedede;
+    transition: background-color 0.25s cubic-bezier(0.075, 0.82, 0.165, 1);
+    color: #444;
+    cursor: pointer;
+}
+
+button.btn:hover {
+    background-color: #444;
+    color: white;
+}
+
+.table-wrapper {
+    position: relative;
+    overflow-x: scroll;
+    box-shadow: rgb(0 0 0 / 12%) 0px 1px 3px, rgb(0 0 0 / 24%) 0px 1px 2px;
+}
+
+table {
+    width: 100%;
+    border-spacing: 0;
+    overflow: scroll;
+}
+
+thead {
+    color: #545b64;
+    background-color: #fafafa;
+}
+
+thead tr th {
+    font-weight: bold;
+    border-top: 1px solid #eaeded;
+    border-left: 1px solid #eaeded;
+    border-bottom: 1px solid #eaeded;
+    text-align: left;
+    padding: 0.4rem 2rem;
+}
+
+thead tr th:first-child {
+    border-left: none;
+}
+
+tbody tr td {
+    padding: 0.8rem 2rem;
+    border-bottom: 1px solid #eaeded;
+}
+
+@keyframes slidedown {
+    100% {
+        top: 0px;
+        opacity: 100%;
+    }
+}
+
+@keyframes slide-in-right {
+    100% {
+        right: 0px;
+        opacity: 100%;
+    }
+}
+
+@keyframes slide-in-left {
+    100% {
+        left: 0px;
+        opacity: 100%;
+    }
+}
+
+@keyframes slide-in-bottom {
+    100% {
+        bottom: 0px;
+        opacity: 100%;
+    }
+}
+
+@keyframes slide-in-top {
+    100% {
+        top: 0px;
+        opacity: 100%;
+    }
 }

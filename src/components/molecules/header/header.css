@@ -1,0 +1,42 @@
+nav {
+    position: fixed;
+    z-index: 9999;
+    height: 4rem;
+    width: 100%;
+    padding: 0 1rem;
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    top: -100px;
+    opacity: 0%;
+    animation: slidedown 1s forwards;
+}
+
+nav > div {
+    width: 60%;
+    height: 3rem;
+    padding: 1rem;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    padding: 0.5rem;
+}
+
+nav ul li:first-child a {
+    font-family: 'Aurek-besh';
+    font-size: small;
+    padding-left: 0;
+}

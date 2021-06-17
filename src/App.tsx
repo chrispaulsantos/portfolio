@@ -1,10 +1,17 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Header from './components/molecules/header/header';
+import RootNavigation from './navigation/root-navigation';
 
 function App() {
   return (
-    <div></div> 
+    <div>
+      <div className="bg-container"></div>
+      <Header />
+      <main>
+        <RootNavigation />
+      </main>
+    </div> 
   );
 }
 

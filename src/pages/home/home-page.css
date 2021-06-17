@@ -1,0 +1,58 @@
+#profile-line-1 {
+    position: relative;
+    top: -100px;
+    opacity: 0;
+    animation: slide-in-top 0.75s forwards;
+}
+
+#profile-line-2 {
+    position: relative;
+    left: -100px;
+    opacity: 0;
+    animation: slide-in-left 0.75s forwards;
+    animation-delay: 0.25s;
+}
+
+#profile-line-3 {
+    position: relative;
+    right: -100px;
+    opacity: 0;
+    animation: slide-in-right 0.75s forwards;
+    animation-delay: 0.5s;
+}
+
+#profile-line-4 {
+    position: relative;
+    bottom: -100px;
+    opacity: 0;
+    animation: slide-in-bottom 0.75s forwards;
+    animation-delay: 0.75s;
+}
+
+#profile-github {
+    position: relative;
+    bottom: -100px;
+    opacity: 0;
+    animation: slide-in-bottom 0.75s forwards;
+    /* animation-delay: 1s; */
+}
+
+#profile-linkedin {
+    position: relative;
+    bottom: -100px;
+    opacity: 0;
+    animation: slide-in-bottom 0.75s forwards;
+    animation-delay: 0.25s;
+}
+
+#profile-ig {
+    position: relative;
+    bottom: -100px;
+    opacity: 0;
+    animation: slide-in-bottom 0.75s forwards;
+    animation-delay: 0.5s;
+}
+
+.social-items a {
+    margin-right: 1rem;
+}
