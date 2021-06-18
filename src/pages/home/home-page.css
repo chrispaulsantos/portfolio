@@ -33,7 +33,7 @@
     position: relative;
     bottom: -100px;
     opacity: 0;
-    animation: slide-in-bottom 0.75s forwards;
+    animation: slide-in-bottom 0.25s forwards;
     /* animation-delay: 1s; */
 }
 
@@ -41,18 +41,27 @@
     position: relative;
     bottom: -100px;
     opacity: 0;
-    animation: slide-in-bottom 0.75s forwards;
+    animation: slide-in-bottom 0.25s forwards;
     animation-delay: 0.25s;
 }
 
-#profile-ig {
+#profile-phone {
     position: relative;
     bottom: -100px;
     opacity: 0;
-    animation: slide-in-bottom 0.75s forwards;
+    animation: slide-in-bottom 0.25s forwards;
     animation-delay: 0.5s;
 }
 
+#profile-email {
+    position: relative;
+    bottom: -100px;
+    opacity: 0;
+    animation: slide-in-bottom 0.25s forwards;
+    animation-delay: 0.75s;
+}
+
 .social-items a {
+    font-size: 1.25rem;
     margin-right: 1rem;
 }

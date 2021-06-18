@@ -7,9 +7,9 @@ const HomePage = () => {
     return (
         <section>
             <div className="card profile flex flex-row justify-content-center align-items-center">
-                <div>
+                {/* <div>
                     <div className="profile-image"></div>
-                </div>
+                </div> */}
                 <div className="profile-content-container justify-content-center">
                     <div className="profile-content">
                         <small id="profile-line-1">HELLO THERE, MY NAME IS</small>
@@ -27,13 +27,17 @@ const HomePage = () => {
                         <br/>
                         <div className="social-items flex flex-row">
                             <a id="profile-github" href="https://github.com/chrispaulsantos" target="_blank">
-                                <img alt="github" src={github}/>
+                                <i className="fab fa-github"></i>
                             </a>
                             <a id="profile-linkedin" href="https://linkedin.com/in/chris-santos" target="_blank">
-                                <img alt="linkedin" src={linkedin}/>
+                                {/* <img alt="linkedin" src={linkedin}/> */}
+                                <i className="fab fa-linkedin-in"></i>
                             </a>
-                            <a id="profile-ig" href="https://github.com/chrispaulsantos" target="_blank">
-                                <img alt="github" src={github}/>
+                            <a id="profile-phone" href="tel:+12018194615" target="_blank">
+                                <i className="fas fa-mobile"></i>
+                            </a>
+                            <a id="profile-email" href="mailto:chris@jaig.dev" target="_blank">
+                                <i className="fas fa-at"></i>
                             </a>
                         </div>
                     </div>
