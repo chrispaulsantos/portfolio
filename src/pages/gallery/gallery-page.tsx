@@ -1,25 +1,27 @@
 import React from 'react';
 import './gallery-page.css';
 import Page from '../page';
+import Section, { SectionAnimations } from '../../components/molecules/section/section';
+import img from '../../images/star_wars.jpeg';
 
 const GalleryPage = () => {
     return (
         <Page>
-            <section id="section1">
-                <div className="card">
-                    
+            <Section animate animation={SectionAnimations.SlideInLeft}>
+                <div className="flex justify-content-center">
+                    <img src={img} />
                 </div>
-            </section>
-            <section id="section2">
-                <div className="card">
-                    
+            </Section>
+            <Section animate animation={SectionAnimations.SlideInRight}>
+                <div className="flex justify-content-center">
+                    <img src={img} />
                 </div>
-            </section>
-            <section id="section3">
-                <div className="card">
-                    
+            </Section>
+            <Section animate animation={SectionAnimations.SlideInLeft}>
+                <div className="flex justify-content-center">
+                    <img src={img} /> 
                 </div>
-            </section>
+            </Section>
         </Page>
     ) 
 }
