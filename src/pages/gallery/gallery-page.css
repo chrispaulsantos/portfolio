@@ -2,16 +2,20 @@ section {
     margin-bottom: 1rem;
 }
 
+.gallery-picture {
+    width: 100%;
+}
+
 .section-left-animation {
     position: relative;
     opacity: 0;
     left: -100px;
-    animation: slide-in-left 1s forwards;
+    animation: slide-in-left 2s forwards;
 }
 
 .section-right-animation {
     position: relative;
     opacity: 0;
     right: -100px;
-    animation: slide-in-right 1s forwards;
+    animation: slide-in-right 2s forwards;
 }
