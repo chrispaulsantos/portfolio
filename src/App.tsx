@@ -8,9 +8,7 @@ function App() {
     <div>
       <div className="bg-container"></div>
       <Header />
-      <main>
-        <RootNavigation />
-      </main>
+      <RootNavigation />
     </div> 
   );
 }

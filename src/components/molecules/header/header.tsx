@@ -7,16 +7,19 @@ const Header = () => {
             <div>
                 <ul>
                     <li>
-                        <Link to="/">Santos</Link>
+                        <Link to="/">&lt;/<span className="aurebesh">santos</span>&gt;</Link>
                     </li>
                     <li>
-                        <Link to="/about">About</Link>
+                        <Link to="/about">.about()</Link>
                     </li>
                     <li>
-                        <Link to="/resume">Resume</Link>
+                        <Link to="/resume">.work()</Link>
                     </li>
                     <li>
-                        <Link to="/contact">Contact</Link>
+                        <Link to="/contact">.contact()</Link>
+                    </li>
+                    <li>
+                        <Link to="/gallery">.gallery()</Link>
                     </li>
                 </ul>
             </div>

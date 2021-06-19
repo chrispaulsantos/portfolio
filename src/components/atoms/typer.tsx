@@ -46,13 +46,17 @@ const Typer = ({lines, timing}: TyperProps) => {
             tempState.currentLinePosition = 0;
         }
 
-        setTimeout(() => {
-            setState(tempState);
-        }, timing ?? 250);
+        setState(tempState);
     }
 
     useEffect(() => {
-        type();
+        // Need to return cleanup to prevent mem leak error since timeout
+        // hangs around otherwise
+        const id = setTimeout(() => {
+            type()
+        }, timing ?? 50);
+
+        return () => clearTimeout(id);
     }, [state.content]);
 
     return <div className="flex flex-column">{state.content}</div>

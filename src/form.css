@@ -133,7 +133,7 @@ input[type='password'] {
     height: 16px;
     border-radius: 100px;
 
-    background: #444;
+    background: #9368b7;
     position: relative;
 }
 
@@ -164,7 +164,7 @@ input[type='password'] {
 }
 
 .form-control .radio-group-item input:checked ~ .text {
-    color: hsl(0, 0%, 40%);
+    color: #9368b7;
 }
 
 .form-control .checkbox-group {

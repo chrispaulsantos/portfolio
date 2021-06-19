@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;700&display=swap');
 @font-face {
     font-family: 'Aurek-besh';
     src: url(./fonts/aurebesh.woff) format('woff');
@@ -14,9 +15,7 @@ body {
     margin: 0;
     padding: 0;
 
-    /* overflow: hidden; */
-
-    font-family: 'Lato', sans-serif;
+    font-family: 'Source Code Pro', sans-serif;
     font-size: 16px;
     font-weight: 400;
 
@@ -24,6 +23,14 @@ body {
 
     width: 100vw;
     height: 100vh;
+
+    overflow-x: hidden;
+    overflow-y: scroll;
+    -ms-overflow-style: none; /* IE and Edge */
+}
+
+body::-webkit-scrollbar {
+    display: none;
 }
 
 h1,
@@ -98,11 +105,12 @@ a {
 }
 
 a:hover {
-    color: #444;
+    color: #9368b7;
 }
 
 .aurebesh {
     font-family: 'Aurek-Besh';
+    font-size: 0.6rem;
 }
 
 small.aurebesh {

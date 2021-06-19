@@ -1,0 +1,20 @@
+#section1 {
+    position: relative;
+    opacity: 0;
+    left: -100px;
+    animation: slide-in-left 1s forwards;
+}
+
+#section2 {
+    position: relative;
+    opacity: 0;
+    right: -100px;
+    animation: slide-in-right 1s forwards;
+}
+
+#section3 {
+    position: relative;
+    opacity: 0;
+    left: -100px;
+    animation: slide-in-left 1s forwards;
+}

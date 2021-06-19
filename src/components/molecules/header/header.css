@@ -1,7 +1,6 @@
 nav {
     position: fixed;
     z-index: 9999;
-    height: 4rem;
     width: 100%;
     padding: 0 1rem;
     margin-top: 1rem;
@@ -14,17 +13,25 @@ nav {
 
 nav > div {
     width: 60%;
-    height: 3rem;
     padding: 1rem;
     background-color: white;
     border-radius: 12px;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    overflow-x: scroll;
+    overflow-y: hidden;
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+}
+
+nav > div::-webkit-scrollbar {
+    display: none;
 }
 
 nav ul {
     margin: 0;
     padding: 0;
     list-style: none;
+    display: flex;
 }
 
 nav ul li {
@@ -35,8 +42,6 @@ nav ul li a {
     padding: 0.5rem;
 }
 
-nav ul li:first-child a {
-    font-family: 'Aurek-besh';
-    font-size: small;
-    padding-left: 0;
+nav ul li:first-child {
+    margin-right: auto;
 }
