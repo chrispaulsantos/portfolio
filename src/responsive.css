@@ -1,0 +1,9 @@
+@media screen and (max-width: 720px) {
+    div nav > div {
+        width: 100%;
+    }
+
+    main section {
+        width: 100%;
+    }
+}

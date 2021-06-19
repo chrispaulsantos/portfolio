@@ -1,3 +1,40 @@
+.profile-content-container {
+    padding: 1rem;
+    align-self: flex-start;
+    flex-grow: 1;
+    display: flex;
+}
+
+.profile-content {
+    width: 100%;
+}
+
+.profile-content h1 {
+    font-size: 3rem;
+}
+
+.profile-content aside {
+    font-weight: bold;
+}
+
+.profile-content p.aurebesh {
+    font-size: 0.75rem;
+    margin-top: 0;
+}
+
+.profile-content .bio {
+    font-size: larger;
+}
+
+.profile-image {
+    border-radius: 12px;
+    /* background-image: url(../chris.JPG); */
+    background-position: 50% 38%;
+    background-size: 300%;
+    height: 475px;
+    width: 256px;
+}
+
 #profile-line-1 {
     position: relative;
     top: -100px;
