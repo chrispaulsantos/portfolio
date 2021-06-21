@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 interface TyperProps {
     lines: string[];
     timing?: number;
+    delay?: number;
 }
 
 interface TyperState {
@@ -13,7 +14,7 @@ interface TyperState {
     complete: boolean;
 }
 
-const Typer = ({lines, timing}: TyperProps) => {
+const Typer = ({lines, timing, delay}: TyperProps) => {
     const [state, setState] = useState<TyperState>({
         currentLine: 0,
         currentLinePosition: 0,
@@ -53,13 +54,13 @@ const Typer = ({lines, timing}: TyperProps) => {
         // Need to return cleanup to prevent mem leak error since timeout
         // hangs around otherwise
         const id = setTimeout(() => {
-            type()
+            type();
         }, timing ?? 50);
 
         return () => clearTimeout(id);
     }, [state.content]);
 
-    return <div className="flex flex-column">{state.content}</div>
+    return <span>{state.content}</span>
 }
 
 export default Typer;

@@ -12,7 +12,7 @@ interface SectionProps {
 }
 
 const Section = ({children, animate, animation}: SectionProps) => {
-    const [isVisible, setIsVisible] = useState(!animate);
+    const [isVisible, setIsVisible] = useState(!!!animate);
     const sectionRef = useRef<HTMLElement | null>(null)
     
     useEffect(() => {
@@ -27,6 +27,7 @@ const Section = ({children, animate, animation}: SectionProps) => {
     
         const observer = new IntersectionObserver(([entry]) => {
             if (entry.isIntersecting) {
+                console.log(sectionRef);
                 setIsVisible(true);
             }
         });

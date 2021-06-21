@@ -2,34 +2,39 @@ import React from 'react';
 import './home-page.css';
 import Typer from '../../components/atoms/typer';
 import Page from '../page';
+import Sphere from '../../components/molecules/sphere/sphere';
 
 const HomePage = () => {
     return (
         <Page>
             <section>
                 <div className="card profile flex flex-row justify-content-center align-items-center">
-                    {/* <div>
-                        <div className="profile-image"></div>
-                    </div> */}
                     <div className="profile-content-container justify-content-center">
                         <div className="profile-content">
-                            <small id="profile-line-1">HELLO THERE, MY NAME IS</small>
-                            <h1 id="profile-line-2">CHRIS SANTOS</h1>
-                            <p id="profile-line-3" className="aurebesh">chris santos</p>
-                            <aside id="profile-line-4">Software Development Engineer I | AWS</aside>
+                            <div className="flex flex-row flex-wrap">
+                                <div>
+                                    <small id="profile-line-1">HELLO THERE, MY NAME IS</small>
+                                    <h1 id="profile-line-2">CHRIS SANTOS</h1>
+                                    <p id="profile-line-3" className="aurebesh">chris santos</p>
+                                    <aside id="profile-line-4">Software Development Engineer I | AWS</aside>
+                                </div>
+                                <div className="sphere-container">
+                                    <Sphere />
+                                </div>
+                            </div>
                             <br/>
                             <div className="social-items flex flex-row">
-                                <a id="profile-github" href="https://github.com/chrispaulsantos" target="_blank" rel="noreferrer">
+                                <a className="social-link" id="profile-github" href="https://github.com/chrispaulsantos" target="_blank" rel="noreferrer">
                                     <i className="fab fa-github"></i>
                                 </a>
-                                <a id="profile-linkedin" href="https://linkedin.com/in/chris-santos" target="_blank" rel="noreferrer">
+                                <a className="social-link" id="profile-linkedin" href="https://linkedin.com/in/chris-santos" target="_blank" rel="noreferrer">
                                     {/* <img alt="linkedin" src={linkedin}/> */}
                                     <i className="fab fa-linkedin-in"></i>
                                 </a>
-                                <a id="profile-phone" href="tel:+12018194615">
+                                <a className="social-link" id="profile-phone" href="tel:+12018194615">
                                     <i className="fas fa-mobile"></i>
                                 </a>
-                                <a id="profile-email" href="mailto:chris@jaig.dev"> 
+                                <a className="social-link" id="profile-email" href="mailto:chris@jaig.dev"> 
                                     <i className="fas fa-at"></i>
                                 </a>
                             </div>

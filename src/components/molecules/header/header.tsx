@@ -3,7 +3,7 @@ import './header.css';
 
 const Header = () => {
     return (
-        <nav>
+        <nav key="nav">
             <div>
                 <ul>
                     <li>

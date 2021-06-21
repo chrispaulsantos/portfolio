@@ -98,7 +98,26 @@
     animation-delay: 0.75s;
 }
 
-.social-items a {
+.social-items {
+}
+
+.social-link {
     font-size: 1.25rem;
     margin-right: 1rem;
+}
+
+.social-link:hover {
+    transform: translateY(-2px);
+}
+
+.sphere-container {
+    overflow: hidden;
+    margin-left: auto;
+}
+
+@media screen and (max-width: 924px) {
+    .sphere-container {
+        margin-right: auto;
+        margin-top: 1rem;
+    }
 }

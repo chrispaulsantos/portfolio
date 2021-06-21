@@ -201,34 +201,34 @@ tbody tr td {
 @keyframes slidedown {
     100% {
         top: 0px;
-        opacity: 100%;
+        opacity: 1;
     }
 }
 
 @keyframes slide-in-right {
     100% {
         right: 0px;
-        opacity: 100%;
+        opacity: 1;
     }
 }
 
 @keyframes slide-in-left {
     100% {
         left: 0px;
-        opacity: 100%;
+        opacity: 1;
     }
 }
 
 @keyframes slide-in-bottom {
     100% {
         bottom: 0px;
-        opacity: 100%;
+        opacity: 1;
     }
 }
 
 @keyframes slide-in-top {
     100% {
         top: 0px;
-        opacity: 100%;
+        opacity: 1;
     }
 }
