@@ -9,7 +9,8 @@
 .point {
     position: absolute;
     opacity: 0;
-    transform: translateZ(0px);
+    transform: none;
+    transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 @-webkit-keyframes rotating /* Safari and Chrome */ {
@@ -58,10 +59,4 @@
     -ms-animation: rotating 2s linear infinite;
     -o-animation: rotating 2s linear infinite;
     animation: rotating 2s linear infinite;
-}
-
-@keyframes fadeIn {
-    100% {
-        opacity: 1;
-    }
 }

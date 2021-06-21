@@ -300,7 +300,7 @@ export function generateSphere(ref: React.MutableRefObject<HTMLElement>, size: n
     const sphere = ref.current;
 
     if (!sphere) {
-        return;
+        return [];
     }
 
     // Set the specified size on ths sphere
@@ -336,6 +336,7 @@ export function generateSphere(ref: React.MutableRefObject<HTMLElement>, size: n
     // vector coming out of the screen, or (0, 0, 1);
     const a = new Vector3(0, 0, 1);
 
+    const timeoutIds: NodeJS.Timeout[] = [];
     // Loop through the created vectors
     vectors.forEach((v, i) => {
         // Create a quaternion from our vectors
@@ -356,15 +357,6 @@ export function generateSphere(ref: React.MutableRefObject<HTMLElement>, size: n
         // Shift the origin to the center of the div
         v.add(new Vector3(scale / 3, scale / 3, 0));
 
-        // Set our css transforms here which translate and rotate the images
-        // onto the sphere
-        div.setAttribute(
-            'style',
-            `transform: translate3d(${v.x}px, ${v.y}px, ${v.z}px) rotateX(${angles.x}rad) rotateY(${
-                angles.y
-            }rad) rotateZ(${angles.z}rad); animation: fadeIn ${0.5 * i}s forwards;`
-        );
-
         // This is the img tag we will add to our point div
         const img = document.createElement('img');
         img.height = scale / 3.25;
@@ -373,7 +365,23 @@ export function generateSphere(ref: React.MutableRefObject<HTMLElement>, size: n
 
         // Append the img to the point div
         div.appendChild(img);
+
+        // Delay setting the transform so we can build out the sphere 1 by 1
+        const id = setTimeout(() => {
+            // Set our css transforms here which translate and rotate the images
+            // onto the sphere
+            div.setAttribute(
+                'style',
+                `transform: translate3d(${v.x}px, ${v.y}px, ${v.z}px) rotateX(${angles.x}rad) rotateY(${
+                    angles.y
+                }rad) rotateZ(${angles.z}rad); opacity: 1;`
+            );
+        }, i * 200);
+        timeoutIds.push(id);
+
         // Append the point div to the sphere
         sphere.appendChild(div);
     });
+
+    return timeoutIds;
 }
