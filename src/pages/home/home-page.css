@@ -11,6 +11,9 @@
 
 .profile-content h1 {
     font-size: 3rem;
+    line-height: 0.75;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 
 .profile-content aside {
@@ -118,6 +121,6 @@
 @media screen and (max-width: 924px) {
     .sphere-container {
         margin-right: auto;
-        margin-top: 1rem;
+        margin-top: 1.5rem;
     }
 }

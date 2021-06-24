@@ -12,7 +12,9 @@ const Sphere = () => {
         return () => timeoutIds.forEach(id => clearTimeout(id));
     }, [ref]);
 
-    return <div ref={ref} className="sphere"></div>
+    return <div ref={ref} className="sphere">
+        <div className="sphere-inner"></div>
+    </div>
 }
 
 export default Sphere;
