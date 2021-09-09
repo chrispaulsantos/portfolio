@@ -1,13 +1,12 @@
 import React from 'react';
+import WorkTimeline from '../../components/organisms/work-timeline';
 import Page from '../page';
 
 const ResumePage = () => {
     return (
         <Page>
             <section>
-                <div className="card">
-                    <img alt="resume" src={process.env.PUBLIC_URL + "/resume.svg"}/>
-                </div>
+                <WorkTimeline />
             </section>
         </Page>
     )

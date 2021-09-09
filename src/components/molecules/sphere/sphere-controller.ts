@@ -292,7 +292,8 @@ let imagePaths = [
     'images/aws.svg',
     'images/git.svg',
     'images/latex.svg',
-    'images/react.svg'
+    'images/react.svg',
+    'images/html.svg'
 ];
 
 export function generateSphere(ref: React.MutableRefObject<HTMLElement>, size: number) {

@@ -1,0 +1,230 @@
+import React, { useEffect, useRef, useState } from 'react';
+
+export const TimelineEventDescription = ({content}: {content: string}) => {
+    return <div style={{display: 'flex', flexDirection: 'row', marginBottom: '0.5rem'}}>
+        <p style={{margin: 0, marginRight: '0.5rem'}}>-</p>
+        <p style={{margin: 0}}>{content}</p>
+    </div>
+}
+
+export const TimelineEvent = ({children, company, title, location, date}: {children?: JSX.Element | JSX.Element[], company: string, title: string, location: string, date: string}) => {
+    const [isVisible, setIsVisible] = useState(false);
+    const ref = useRef<HTMLDivElement | null>(null)
+    
+    useEffect(() => {
+        const node = ref?.current;
+    
+        if (!node) return
+    
+        const observer = new IntersectionObserver(([entry]) => {
+            if (entry.isIntersecting) {
+                console.log(ref);
+                setIsVisible(true);
+            }
+        });
+    
+        observer.observe(node)
+    
+        return () => observer.disconnect()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [ref]);
+
+    const className = isVisible ? 'section-right-animation' : '';
+
+    return <div ref={ref} style={{
+        position: 'relative',
+        // backgroundColor: '#9368b7',
+        backgroundColor: '#fff',
+        // color: '#fefefe',
+        boxShadow: '0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)',
+        borderRadius: '12px'
+    }} className={className}>
+        <div style={{
+            borderRadius: '50%',
+            width: 8,
+            height: 8,
+            display: 'block',
+            position: 'absolute',
+            backgroundColor: '#444',
+            top: '50%',
+            left: 'calc(-1rem - 4.5px)'
+        }}></div>
+        <div style={{padding: '2rem', }}>
+            <h2>{title} | {company}</h2>
+            <h3>{date}</h3>
+            <h3>{location}</h3>
+            <div style={{marginTop: '1rem'}}>
+                {children}
+            </div>
+        </div>
+        <div className="aurebesh" style={{textAlign: 'right', color: 'rgba(128,128,128,0.25)', paddingBottom: '1rem', paddingRight: '1rem'}}>{company}</div>
+    </div>
+}
+
+export const TimelineSkill = ({src}: {children?: JSX.Element | JSX.Element[], src: string}) => {
+    const [isVisible, setIsVisible] = useState(false);
+    const ref = useRef<HTMLDivElement | null>(null)
+    
+    useEffect(() => {
+        const node = ref?.current;
+    
+        if (!node) return
+    
+        const observer = new IntersectionObserver(([entry]) => {
+            if (entry.isIntersecting) {
+                console.log(ref);
+                setIsVisible(true);
+            }
+        });
+    
+        observer.observe(node)
+    
+        return () => observer.disconnect()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [ref]);
+
+    const className = isVisible ? 'section-right-animation' : '';
+
+    return <div ref={ref} style={{
+        position: 'relative',
+        // backgroundColor: '#9368b7',
+        // backgroundColor: '#fff',
+        // color: '#fefefe',
+        // boxShadow: '0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)',
+        // borderRadius: '12px'
+    }} className={className}>
+        <div style={{
+            borderRadius: '50%',
+            width: 8,
+            height: 8,
+            display: 'block',
+            position: 'absolute',
+            backgroundColor: '#444',
+            top: '50%',
+            left: 'calc(-1rem - 4.5px)'
+        }}></div>
+        <div style={{padding: 0, top: 4, position: 'relative', display: 'flex', alignItems: 'center' }}>
+            {/* &nbsp;{date} */}
+            <img height="60" src={src} />
+        </div>
+        {/* <div className="aurebesh" style={{textAlign: 'right', color: 'rgba(128,128,128,0.25)', paddingBottom: '1rem', paddingRight: '1rem'}}>{company}</div> */}
+    </div>
+}
+
+export const TimelineDate = ({date}: {children?: JSX.Element | JSX.Element[], date: string}) => {
+    const [isVisible, setIsVisible] = useState(false);
+    const ref = useRef<HTMLDivElement | null>(null)
+    
+    useEffect(() => {
+        const node = ref?.current;
+    
+        if (!node) return
+    
+        const observer = new IntersectionObserver(([entry]) => {
+            if (entry.isIntersecting) {
+                console.log(ref);
+                setIsVisible(true);
+            }
+        });
+    
+        observer.observe(node)
+    
+        return () => observer.disconnect()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [ref]);
+
+    const className = isVisible ? 'section-right-animation' : '';
+
+    return <div ref={ref} style={{
+        position: 'relative',
+        // backgroundColor: '#9368b7',
+        backgroundColor: '#fff',
+        // color: '#fefefe',
+        boxShadow: '0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)',
+        borderRadius: '12px',
+    }} className={className}>
+        <div style={{
+            borderRadius: '50%',
+            width: 8,
+            height: 8,
+            display: 'block',
+            position: 'absolute',
+            backgroundColor: '#444',
+            top: '50%',
+            left: 'calc(-1rem - 4.5px)'
+        }}></div>
+        <div style={{padding: '1rem', position: 'relative', display: 'flex', alignItems: 'center' }}>
+            &nbsp;{date}
+        </div>
+        {/* <div className="aurebesh" style={{textAlign: 'right', color: 'rgba(128,128,128,0.25)', paddingBottom: '1rem', paddingRight: '1rem'}}>{company}</div> */}
+    </div>
+}
+
+export const TimelineEducation = ({content, src, date}: {content: string, src: string, date: string}) => {
+    const [isVisible, setIsVisible] = useState(false);
+    const ref = useRef<HTMLDivElement | null>(null)
+    
+    useEffect(() => {
+        const node = ref?.current;
+    
+        if (!node) return
+    
+        const observer = new IntersectionObserver(([entry]) => {
+            if (entry.isIntersecting) {
+                console.log(ref);
+                setIsVisible(true);
+            }
+        });
+    
+        observer.observe(node)
+    
+        return () => observer.disconnect()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [ref]);
+
+    const className = isVisible ? 'section-right-animation' : '';
+
+    return <div ref={ref} style={{
+        position: 'relative',
+        // backgroundColor: '#9368b7',
+        backgroundColor: '#fff',
+        // color: '#fefefe',
+        boxShadow: '0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)',
+        borderRadius: '12px',
+    }} className={className}>
+        <div style={{
+            borderRadius: '50%',
+            width: 8,
+            height: 8,
+            display: 'block',
+            position: 'absolute',
+            backgroundColor: '#444',
+            top: '50%',
+            left: 'calc(-1rem - 4.5px)'
+        }}></div>
+        <div style={{padding: '1rem', position: 'relative', display: 'flex', alignItems: 'center' }}>
+            <img height="60" src={src} />
+            <div style={{marginLeft: '1rem'}}>
+                <h3>
+                    {content}
+                </h3>
+                <small>{date}</small>
+            </div>
+        </div>
+        {/* <div className="aurebesh" style={{textAlign: 'right', color: 'rgba(128,128,128,0.25)', paddingBottom: '1rem', paddingRight: '1rem'}}>{company}</div> */}
+    </div>
+}
+
+const Timeline = ({children}: {children: JSX.Element[]}) => {
+    return <div style={{borderLeft: '1px solid #444',  width: '100%', position: 'relative', paddingTop: '2rem', paddingLeft: '1rem'}}>
+        {
+            children.map((child, i) => {
+                return <div key={i} style={{marginBottom: '3rem'}}>
+                    {child}
+                </div>
+            })
+        }
+    </div>
+}
+
+export default Timeline;
