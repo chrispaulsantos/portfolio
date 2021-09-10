@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import ScrollAnimator from '../../atoms/scroll-animator';
 
 export const TimelineEventDescription = ({content}: {content: string}) => {
     return <div style={{display: 'flex', flexDirection: 'row', marginBottom: '0.5rem'}}>
@@ -8,37 +8,14 @@ export const TimelineEventDescription = ({content}: {content: string}) => {
 }
 
 export const TimelineEvent = ({children, company, title, location, date}: {children?: JSX.Element | JSX.Element[], company: string, title: string, location: string, date: string}) => {
-    const [isVisible, setIsVisible] = useState(false);
-    const ref = useRef<HTMLDivElement | null>(null)
-    
-    useEffect(() => {
-        const node = ref?.current;
-    
-        if (!node) return
-    
-        const observer = new IntersectionObserver(([entry]) => {
-            if (entry.isIntersecting) {
-                console.log(ref);
-                setIsVisible(true);
-            }
-        });
-    
-        observer.observe(node)
-    
-        return () => observer.disconnect()
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [ref]);
-
-    const className = isVisible ? 'section-right-animation' : '';
-
-    return <div ref={ref} style={{
+    return <div style={{
         position: 'relative',
         // backgroundColor: '#9368b7',
         backgroundColor: '#fff',
         // color: '#fefefe',
         boxShadow: '0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)',
         borderRadius: '12px'
-    }} className={className}>
+    }}>
         <div style={{
             borderRadius: '50%',
             width: 8,
@@ -62,37 +39,14 @@ export const TimelineEvent = ({children, company, title, location, date}: {child
 }
 
 export const TimelineSkill = ({src}: {children?: JSX.Element | JSX.Element[], src: string}) => {
-    const [isVisible, setIsVisible] = useState(false);
-    const ref = useRef<HTMLDivElement | null>(null)
-    
-    useEffect(() => {
-        const node = ref?.current;
-    
-        if (!node) return
-    
-        const observer = new IntersectionObserver(([entry]) => {
-            if (entry.isIntersecting) {
-                console.log(ref);
-                setIsVisible(true);
-            }
-        });
-    
-        observer.observe(node)
-    
-        return () => observer.disconnect()
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [ref]);
-
-    const className = isVisible ? 'section-right-animation' : '';
-
-    return <div ref={ref} style={{
+    return <div style={{
         position: 'relative',
         // backgroundColor: '#9368b7',
         // backgroundColor: '#fff',
         // color: '#fefefe',
         // boxShadow: '0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)',
         // borderRadius: '12px'
-    }} className={className}>
+    }}>
         <div style={{
             borderRadius: '50%',
             width: 8,
@@ -112,37 +66,14 @@ export const TimelineSkill = ({src}: {children?: JSX.Element | JSX.Element[], sr
 }
 
 export const TimelineDate = ({date}: {children?: JSX.Element | JSX.Element[], date: string}) => {
-    const [isVisible, setIsVisible] = useState(false);
-    const ref = useRef<HTMLDivElement | null>(null)
-    
-    useEffect(() => {
-        const node = ref?.current;
-    
-        if (!node) return
-    
-        const observer = new IntersectionObserver(([entry]) => {
-            if (entry.isIntersecting) {
-                console.log(ref);
-                setIsVisible(true);
-            }
-        });
-    
-        observer.observe(node)
-    
-        return () => observer.disconnect()
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [ref]);
-
-    const className = isVisible ? 'section-right-animation' : '';
-
-    return <div ref={ref} style={{
+    return <div style={{
         position: 'relative',
         // backgroundColor: '#9368b7',
         backgroundColor: '#fff',
         // color: '#fefefe',
         boxShadow: '0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)',
         borderRadius: '12px',
-    }} className={className}>
+    }}>
         <div style={{
             borderRadius: '50%',
             width: 8,
@@ -161,37 +92,12 @@ export const TimelineDate = ({date}: {children?: JSX.Element | JSX.Element[], da
 }
 
 export const TimelineEducation = ({content, src, date}: {content: string, src: string, date: string}) => {
-    const [isVisible, setIsVisible] = useState(false);
-    const ref = useRef<HTMLDivElement | null>(null)
-    
-    useEffect(() => {
-        const node = ref?.current;
-    
-        if (!node) return
-    
-        const observer = new IntersectionObserver(([entry]) => {
-            if (entry.isIntersecting) {
-                console.log(ref);
-                setIsVisible(true);
-            }
-        });
-    
-        observer.observe(node)
-    
-        return () => observer.disconnect()
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [ref]);
-
-    const className = isVisible ? 'section-right-animation' : '';
-
-    return <div ref={ref} style={{
+    return <div style={{
         position: 'relative',
-        // backgroundColor: '#9368b7',
         backgroundColor: '#fff',
-        // color: '#fefefe',
         boxShadow: '0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)',
         borderRadius: '12px',
-    }} className={className}>
+    }}>
         <div style={{
             borderRadius: '50%',
             width: 8,
@@ -211,7 +117,39 @@ export const TimelineEducation = ({content, src, date}: {content: string, src: s
                 <small>{date}</small>
             </div>
         </div>
-        {/* <div className="aurebesh" style={{textAlign: 'right', color: 'rgba(128,128,128,0.25)', paddingBottom: '1rem', paddingRight: '1rem'}}>{company}</div> */}
+    </div>
+}
+
+export const TimelineProject = ({name, href, date, img, description}: {name: string; href: string; date: string; img?: string; description?: string}) => {
+    return <div style={{
+        position: 'relative',
+        backgroundColor: '#fff',
+        boxShadow: '0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)',
+        borderRadius: '12px',
+    }}>
+        <div style={{
+            borderRadius: '50%',
+            width: 8,
+            height: 8,
+            display: 'block',
+            position: 'absolute',
+            backgroundColor: '#444',
+            top: '50%',
+            left: 'calc(-1rem - 4.5px)'
+        }}></div>
+        <div style={{padding: '1rem', position: 'relative', display: 'flex', alignItems: 'center' }}>
+            {
+                img ? <img src={img} height="60"/> : 
+                <h3>
+                   {name} 
+                </h3>
+            }
+            <div style={{marginLeft: '1rem', display: 'flex', flexDirection: 'column'}}>
+                <a className="link" href={href} target="_blank">{name}</a>
+                <small>{date}</small>
+                <div>{description}</div>
+            </div>
+        </div>
     </div>
 }
 
@@ -220,7 +158,9 @@ const Timeline = ({children}: {children: JSX.Element[]}) => {
         {
             children.map((child, i) => {
                 return <div key={i} style={{marginBottom: '3rem'}}>
-                    {child}
+                    <ScrollAnimator animation="timeline-event-animation">
+                        {child}
+                    </ScrollAnimator>
                 </div>
             })
         }

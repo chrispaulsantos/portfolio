@@ -60,7 +60,7 @@ const Typer = ({lines, timing, delay}: TyperProps) => {
         return () => clearTimeout(id);
     }, [state.content]);
 
-    return <span>{state.content}</span>
+    return <div className="typer">{state.content}</div>
 }
 
 export default Typer;

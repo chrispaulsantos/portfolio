@@ -1,0 +1,6 @@
+.timeline-event-animation {
+    position: relative;
+    opacity: 0;
+    transform: translateZ(100px) scale(2);
+    animation: drop-in 1s forwards;
+}
