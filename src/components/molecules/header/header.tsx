@@ -13,13 +13,7 @@ const Header = () => {
                         <Link to="/about">.about()</Link>
                     </li>
                     <li>
-                        <Link to="/resume">.work()</Link>
-                    </li>
-                    <li>
                         <Link to="/contact">.contact()</Link>
-                    </li>
-                    <li>
-                        <Link to="/gallery">.gallery()</Link>
                     </li>
                 </ul>
             </div>
