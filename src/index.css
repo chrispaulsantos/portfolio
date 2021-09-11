@@ -232,10 +232,3 @@ tbody tr td {
         opacity: 1;
     }
 }
-
-@keyframes drop-in {
-    100% {
-        transform: translateZ(0) scale(1);
-        opacity: 1;
-    }
-}

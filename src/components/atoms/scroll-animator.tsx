@@ -15,6 +15,8 @@ const ScrollAnimator = ({children, animation}: {children: JSX.Element, animation
             } else {
                 // setIsVisible(false);
             }
+        }, {
+            threshold: 0.8
         });
     
         observer.observe(node)
