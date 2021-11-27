@@ -53,3 +53,19 @@
     /* left: -100px; */
     animation: timeline-dot-animation 0.5s forwards ease-out;
 }
+
+.timeline-project-image {
+    height: 60px;
+    flex-grow: 1;
+}
+
+@media screen and (max-width: 767px) {
+    .timeline-project {
+        flex-direction: column;
+    }
+
+    .timeline-project-image {
+        margin-bottom: 0.5rem;
+        height: 100px;
+    }
+}

@@ -85,15 +85,15 @@ export const TimelineEducation = ({content, src, date}: {content: string, src: s
 }
 
 export const TimelineProject = ({name, href, date, img, description}: {name: string; href: string; date: string; img?: string; description?: string}) => {
-    return <div style={{
+    return <div className="timeline-project-wrapper" style={{
         position: 'relative',
         backgroundColor: '#fff',
         boxShadow: '0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)',
         borderRadius: '12px',
     }}>
-        <div style={{padding: '1rem', position: 'relative', display: 'flex', alignItems: 'center' }}>
+        <div className="timeline-project" style={{padding: '1rem', position: 'relative', display: 'flex', alignItems: 'center' }}>
             {
-                img ? <img src={img} height="60"/> : 
+                img ? <img src={img} className="timeline-project-image"/> : 
                 <h3>
                    {name} 
                 </h3>

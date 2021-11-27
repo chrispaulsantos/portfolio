@@ -43,7 +43,16 @@ const WorkTimeline = () => {
             <TimelineEventDescription content="Automates build and deployment process" />
         </TimelineEvent>
 
-        <TimelineProject name="xpresso" href="https://www.npmjs.com/package/xpresso" date="August 2018"/>
+        <TimelineProject
+            name="xpresso"
+            href="https://www.npmjs.com/package/xpresso"
+            date="August 2018"
+            description="
+                During my time at Fidelity, I found we were constantly creating the same boilerplate code over and over for our backend services. I set out to 
+                create a code generator that would create all of the boilerplate code and decrease the development time necessary to create a backend. The project
+                uses express.js to set up a RESTful API written in Typescript.
+            "
+        />
 
         <TimelineEvent company="Fidelity Investments" title="Associate Software Engineer" date="January 2018 - June 2019" location="Westlake, TX">
             <TimelineEventDescription content="Develops products using the Agile life cycle" />
