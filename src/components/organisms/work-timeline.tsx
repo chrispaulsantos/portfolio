@@ -3,13 +3,16 @@ import './work-timeline.css';
 
 const WorkTimeline = () => {
     return <Timeline>
+        <TimelineEvent company="AWS" title="Software Development Engineer II" date="December 2021 - Present" location="Dallas, TX">
+        </TimelineEvent>
+
         <TimelineEducation src="/images/timeline/bu.svg" date="September 2021" content="Master of Science | Software Development" />
 
         <TimelineSkill src="/images/timeline/aws.svg" />
         <TimelineSkill src="/images/timeline/react.svg" />
         <TimelineSkill src="/images/timeline/java.svg" />
 
-        <TimelineEvent company="AWS" title="Software Development Engineer I" date="April 2020 - Present" location="Dallas, TX">
+        <TimelineEvent company="AWS" title="Software Development Engineer I" date="April 2020 - December 2021" location="Dallas, TX">
             <TimelineEventDescription content="Built a data warehouse as a service (DWaaS) to increase security and eliminated customer’s requirement to have technical knowledge of infrastructure" />
             <TimelineEventDescription content="Reduced support team’s work load by creating a web application to monitor and perform actions against all accounts within DWaaS" />
             <TimelineEventDescription content="Developed application for data engineers to execute machine learning scripts" />

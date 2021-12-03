@@ -18,7 +18,7 @@ const HomePage = () => {
                                     <small id="profile-line-1">HELLO THERE, MY NAME IS</small>
                                     <h1 id="profile-line-2">CHRIS SANTOS</h1>
                                     <p id="profile-line-3" className="aurebesh">chris santos</p>
-                                    <aside id="profile-line-4">Software Development Engineer I | AWS</aside>
+                                    <aside id="profile-line-4">Software Development Engineer II | AWS</aside>
                                 </div>
                                 <div className="sphere-container">
                                     <Sphere />
