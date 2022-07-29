@@ -92,11 +92,11 @@ function getEulerAnglesFromRotationMatrix(matrix: number[]) {
     var m11 = te[0],
         m12 = te[4],
         m13 = te[8];
-    var m21 = te[1],
-        m22 = te[5],
+    // var m21 = te[1],
+    var m22 = te[5],
         m23 = te[9];
-    var m31 = te[2],
-        m32 = te[6],
+    // var m31 = te[2],
+    var m32 = te[6],
         m33 = te[10];
 
     y = Math.asin(clamp(m13, -1, 1));

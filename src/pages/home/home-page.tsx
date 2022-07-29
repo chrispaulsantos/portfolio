@@ -3,7 +3,6 @@ import './home-page.css';
 import Typer from '../../components/atoms/typer';
 import Page from '../page';
 import Sphere from '../../components/molecules/sphere/sphere';
-import ResumePage from '../resume/resume-page';
 import WorkTimeline from '../../components/organisms/work-timeline';
 
 const HomePage = () => {

@@ -94,7 +94,8 @@
     height: 125px;
     width: 125px;
     position: absolute;
-    background: rgba(127, 127, 127, 0.05);
+    background-color: #dedede;
+    opacity: 0.4;
     border-radius: 50%;
     animation: rotating-backwards 20s infinite linear;
 }

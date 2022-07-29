@@ -13,10 +13,10 @@ const ScrollAnimator = ({children, animation}: {children: JSX.Element, animation
             if (entry.isIntersecting) {
                 setIsVisible(true);
             } else {
-                // setIsVisible(false);
+                setIsVisible(false);
             }
         }, {
-            threshold: 0.8
+            threshold: 0.25
         });
     
         observer.observe(node)
@@ -25,7 +25,7 @@ const ScrollAnimator = ({children, animation}: {children: JSX.Element, animation
     // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [ref]);
 
-    const className = isVisible ? animation || 'section-right-animation' : '';
+    const className = isVisible ? animation : ``;
 
     return <div ref={ref} className={className}>
         {children}

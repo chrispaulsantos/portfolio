@@ -32,7 +32,7 @@ export const TimelineEvent = ({children, company, title, location, date}: {child
     </div>
 }
 
-export const TimelineSkill = ({src}: {children?: JSX.Element | JSX.Element[], src: string}) => {
+export const TimelineSkill = ({src, name}: {children?: JSX.Element | JSX.Element[], src: string, name: string}) => {
     return <div style={{
         position: 'relative',
         // backgroundColor: '#9368b7',
@@ -43,7 +43,7 @@ export const TimelineSkill = ({src}: {children?: JSX.Element | JSX.Element[], sr
     }}>
         <div style={{padding: 0, top: 4, position: 'relative', display: 'flex', alignItems: 'center' }}>
             {/* &nbsp;{date} */}
-            <img height="60" src={src} />
+            <img height="60" src={src} alt={name} />
         </div>
         {/* <div className="aurebesh" style={{textAlign: 'right', color: 'rgba(128,128,128,0.25)', paddingBottom: '1rem', paddingRight: '1rem'}}>{company}</div> */}
     </div>
@@ -65,7 +65,7 @@ export const TimelineDate = ({date}: {children?: JSX.Element | JSX.Element[], da
     </div>
 }
 
-export const TimelineEducation = ({content, src, date}: {content: string, src: string, date: string}) => {
+export const TimelineEducation = ({content, src, date, name}: {content: string, src: string, date: string, name: string}) => {
     return <div style={{
         position: 'relative',
         backgroundColor: '#fff',
@@ -73,7 +73,7 @@ export const TimelineEducation = ({content, src, date}: {content: string, src: s
         borderRadius: '12px',
     }}>
         <div style={{padding: '1rem', position: 'relative', display: 'flex', alignItems: 'center' }}>
-            <img height="60" src={src} />
+            <img height="60" src={src} alt={name} />
             <div style={{marginLeft: '1rem'}}>
                 <h3>
                     {content}
@@ -93,13 +93,13 @@ export const TimelineProject = ({name, href, date, img, description}: {name: str
     }}>
         <div className="timeline-project" style={{padding: '1rem', position: 'relative', display: 'flex', alignItems: 'center' }}>
             {
-                img ? <img src={img} className="timeline-project-image"/> : 
-                <h3>
+                img ? <img src={img} alt={name} className="timeline-project-image"/> : 
+                <h3 style={{alignSelf: 'start'}}>
                    {name} 
                 </h3>
             }
             <div style={{marginLeft: '1rem', display: 'flex', flexDirection: 'column'}}>
-                <a className="link" href={href} target="_blank">{name}</a>
+                <a className="link" href={href} target="_blank" rel='noreferrer'>{name}</a>
                 <small>{date}</small>
                 <div>{description}</div>
             </div>

@@ -4,13 +4,15 @@ import './work-timeline.css';
 const WorkTimeline = () => {
     return <Timeline>
         <TimelineEvent company="AWS" title="Software Development Engineer II" date="December 2021 - Present" location="Dallas, TX">
+            <TimelineEventDescription content="Designed and built a dashboarding solution to collect, process and distribute instrumentation data." />
+            <TimelineEventDescription content="Responsible for developing and maintaining the Galaxi Data Platform's web UI." />
         </TimelineEvent>
 
-        <TimelineEducation src="/images/timeline/bu.svg" date="September 2021" content="Master of Science | Software Development" />
+        <TimelineEducation src="/images/timeline/bu.svg" date="September 2021" content="Master of Science | Software Development" name='bu'/>
 
-        <TimelineSkill src="/images/timeline/aws.svg" />
-        <TimelineSkill src="/images/timeline/react.svg" />
-        <TimelineSkill src="/images/timeline/java.svg" />
+        <TimelineSkill src="/images/timeline/aws.svg" name='aws'/>
+        <TimelineSkill src="/images/timeline/react.svg" name='react' />
+        <TimelineSkill src="/images/timeline/java.svg" name='java' />
 
         <TimelineEvent company="AWS" title="Software Development Engineer I" date="April 2020 - December 2021" location="Dallas, TX">
             <TimelineEventDescription content="Built a data warehouse as a service (DWaaS) to increase security and eliminated customer’s requirement to have technical knowledge of infrastructure" />
@@ -18,7 +20,7 @@ const WorkTimeline = () => {
             <TimelineEventDescription content="Developed application for data engineers to execute machine learning scripts" />
         </TimelineEvent>
 
-        <TimelineSkill src="/images/timeline/postgres.svg" />
+        <TimelineSkill src="/images/timeline/postgres.svg" name='postgres' />
 
         <TimelineProject
             name="Star Wars Comics"
@@ -63,7 +65,7 @@ const WorkTimeline = () => {
             <TimelineEventDescription content="Developed framework to automate creation of boilerplate code for server-side applications" />
         </TimelineEvent>
 
-        <TimelineEducation src="/images/timeline/umaine.svg" date="December 2017" content="Bachelor of Science | Electrical Engineering" />
+        <TimelineEducation src="/images/timeline/umaine.svg" date="December 2017" content="Bachelor of Science | Electrical Engineering" name='umaine' />
 
         <TimelineProject 
             name="Comic Manager"
@@ -75,10 +77,10 @@ const WorkTimeline = () => {
                 The database used was MongoDB. This would later evolve into my current comic site, Star Wars Comics.
             "/>
 
-        <TimelineSkill src="/images/timeline/docker.svg" />
-        <TimelineSkill src="/images/timeline/angular.svg" />
-        <TimelineSkill src="/images/timeline/nodejs.svg" />
-        <TimelineSkill src="/images/timeline/mongo.svg" />
+        <TimelineSkill src="/images/timeline/docker.svg" name='docker' />
+        <TimelineSkill src="/images/timeline/angular.svg" name='angular' />
+        <TimelineSkill src="/images/timeline/nodejs.svg" name='nodejs' />
+        <TimelineSkill src="/images/timeline/mongo.svg" name='mongo' />
 
         <TimelineEvent company="Fidelity Investments" title="Software Engineering Intern" date="May 2017 - August 2017" location="Westlake, TX">
         </TimelineEvent>
@@ -96,9 +98,9 @@ const WorkTimeline = () => {
         <TimelineEvent company="Fidelity Investments" title="Software Engineering Intern" date="May 2016 - August 2016" location="Boston, MA">
         </TimelineEvent>
 
-        <TimelineSkill src="/images/timeline/javascript.svg" />
-        <TimelineSkill src="/images/timeline/html.svg" />
-        <TimelineSkill src="/images/timeline/git.svg" />
+        <TimelineSkill src="/images/timeline/javascript.svg" name='javascript' />
+        <TimelineSkill src="/images/timeline/html.svg" name='html' />
+        <TimelineSkill src="/images/timeline/git.svg" name='git' />
 
         <TimelineEvent company="Fidelity Investments" title="Software Engineering Intern" date="May 2015 - August 2015" location="Boston, MA">
         </TimelineEvent>
